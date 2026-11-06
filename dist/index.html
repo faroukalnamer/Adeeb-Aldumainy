@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07101a" />
+  <meta name="description" content="تطبيق ويب متكامل لخدمات وتتبع صيانة وبرمجة الهواتف الذكية — خبير معتمد في اليمن: أديب الدُميني Phone Care." />
+  <title>أديب الدُميني — Phone Care | تطبيق صيانة وبرمجة الهواتف الذكية</title>
+  
+  <link rel="manifest" href="/public/manifest.json" />
+  <link rel="icon" type="image/png" href="/public/favicon.ico" />
+  <link rel="apple-touch-icon" href="/public/icon-192.png" />
+
+  <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Application Stylesheet -->
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise-overlay"></div>
+
+  <!-- App Header & Navigation Bar -->
+  <header class="app-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" data-goto="hero">
+        <div class="brand-logo-badge">A</div>
+        <div class="brand-text-col">
+          <div class="brand-title">أديب <b>الدُميني</b></div>
+          <div class="brand-subtitle">
+            <span class="status-dot"></span>
+            <span>Phone Care · مركز صيانة معتمد</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Main Navigation Links -->
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a class="nav-link active" data-view="tracker">🔍 تتبع جهازي</a>
+        <a class="nav-link" data-view="calculator">⚡ حاسبة التكلفة</a>
+        <a class="nav-link" data-view="booking">📅 حجز صيانة</a>
+        <a class="nav-link" data-view="catalog">🧰 دليل الطوارئ والخدمات</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button id="btn-pwa-install" class="btn-pwa-install" title="تثبيت التطبيق على جهازك">
+          <span>⬇️</span> تثبيت التطبيق
+        </button>
+
+        <button class="btn-admin-switch" title="التبديل إلى لوحة تحكم الفني والمركز">
+          <span>🛠️ لوحة الفني</span>
+          <span class="nav-badge-count">3</span>
+        </button>
+
+        <button class="mobile-menu-toggle" aria-label="فتح القائمة">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero & Quick Operations Hub -->
+    <section class="app-hero" id="hero">
+      <div class="hero-grid">
+        <div class="hero-info-col">
+          <div class="hero-badge-pill">
+            <span>✦</span> أحدث معدات المجهر الإلكتروني والبرمجة باليمن
+          </div>
+          <h1 class="hero-heading">
+            صيانة هندسية متطورة<br>
+            <span class="accent-lime">ودقة تدوم طويلاً</span> لجميع الهواتف.
+          </h1>
+          <p class="hero-desc">
+            تطبيق الويب الرسمي لمركز <b>أديب الدُميني</b> في دمنة خدير. تتبع حالة صيانة جهازك خطوة بخطوة، احسب التكلفة الفورية، واحجز موعدك مع ضمان قطع الغيار الأصلية بنسبة 100%.
+          </p>
+
+          <div class="hero-quick-actions">
+            <button class="btn btn-primary" data-goto="tracker">
+              <span>🔍 تتبع حالة جهازك الآن</span>
+            </button>
+            <button class="btn btn-secondary" data-goto="calculator">
+              <span>⚡ حاسبة التكلفة الفورية</span>
+            </button>
+            <a href="https://wa.me/967770000000?text=مرحباً%20م.%20أديب%20الدُميني،%20أود%20الاستفسار%20عن%20صيانة%20هاتفي" target="_blank" class="btn btn-whatsapp">
+              <span>💬 واتساب الفني المباشر</span>
+            </a>
+          </div>
+
+          <!-- Live Stats Strip -->
+          <div class="stats-strip">
+            <div class="stat-item">
+              <span class="stat-num">+10</span>
+              <span class="stat-label">سنوات خبرة فنية</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">+5,400</span>
+              <span class="stat-label">جهاز تم إصلاحه</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">99.2%</span>
+              <span class="stat-label">نسبة نجاح الصيانة</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">قطع أصلية وضمان</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Tracker Widget Card -->
+        <div class="hero-widget-card">
+          <div class="widget-card-header">
+            <div class="widget-title">
+              <span>📱 تتبع سريع وفوري للصيانة</span>
+            </div>
+            <span class="widget-chip">مباشر 24/7</span>
+          </div>
+
+          <p style="font-size:0.85rem; color:var(--muted-light); margin-bottom:14px;">
+            أدخل رقم تذكرتك لمعرفة مرحلة صيانة جهازك والفني وتاريخ التسليم:
+          </p>
+
+          <div class="quick-search-box">
+            <input type="text" id="hero-quick-track-input" class="input-track" placeholder="مثال: AD-7091 أو رقم هاتفك" />
+            <button id="hero-quick-track-btn" class="btn btn-primary btn-sm">فحص ↵</button>
+          </div>
+
+          <div style="font-size:0.78rem; color:var(--muted); margin-bottom:8px;">أو جرب نماذج التتبع الحية:</div>
+          <div class="sample-tickets-list">
+            <button class="sample-ticket-btn" data-code="AD-7091">
+              <div class="sample-btn-info">
+                <span class="sample-btn-code">AD-7091</span>
+                <span class="sample-btn-device">iPhone 13 Pro Max (شاشة OLED وكالة)</span>
+              </div>
+              <span class="status-badge ready" style="font-size:0.7rem; padding:2px 8px;">جاهز للاستلام ✅</span>
+            </button>
+            <button class="sample-ticket-btn" data-code="AD-8842">
+              <div class="sample-btn-info">
+                <span class="sample-btn-code">AD-8842</span>
+                <span class="sample-btn-device">Samsung S22 Ultra (عطل شحن وVBUS)</span>
+              </div>
+              <span class="status-badge repairing" style="font-size:0.7rem; padding:2px 8px;">قيد الصيانة ⚙️</span>
+            </button>
+            <button class="sample-ticket-btn" data-code="AD-4120">
+              <div class="sample-btn-info">
+                <span class="sample-btn-code">AD-4120</span>
+                <span class="sample-btn-device">Redmi Note 12 Pro (سوفتوير وبوتلوب)</span>
+              </div>
+              <span class="status-badge quality_check" style="font-size:0.7rem; padding:2px 8px;">اختبار الجودة 🧪</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Views Tab Selector Strip -->
+    <div class="app-sections-tabs">
+      <div class="tabs-wrapper">
+        <button class="tab-btn active" data-view="tracker">
+          <span class="tab-icon">🔍</span>
+          <span>تتبع حالة الصيانة</span>
+        </button>
+        <button class="tab-btn" data-view="calculator">
+          <span class="tab-icon">⚡</span>
+          <span>حاسبة وتشخيص الأعطال</span>
+        </button>
+        <button class="tab-btn" data-view="booking">
+          <span class="tab-icon">📅</span>
+          <span>حجز صيانة واستلام جهاز</span>
+        </button>
+        <button class="tab-btn" data-view="catalog">
+          <span class="tab-icon">🚨</span>
+          <span>دليل الطوارئ والخدمات</span>
+        </button>
+        <button class="tab-btn" data-view="admin">
+          <span class="tab-icon">🛠️</span>
+          <span>لوحة تحكم الفني والإدارة</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         VIEW 1: REPAIR TRACKER (تتبع حالة الصيانة)
+         =================================================================== -->
+    <section class="app-view active" id="view-tracker">
+      <div class="section-title-wrap">
+        <div class="section-kicker"><span>●</span> نظام التتبع المباشر</div>
+        <h2 class="section-main-heading">تتبع حالة صيانة جهازك بدقة لحظية</h2>
+        <p class="section-subdesc">استعلم برقم تذكرة الاستلام المسلمة لك بالمركز أو برقم الهاتف المسجل لدينا.</p>
+      </div>
+
+      <!-- Search Input Box -->
+      <div class="tracker-search-container">
+        <div class="tracker-form-row">
+          <div class="tracker-input-group">
+            <input type="text" id="input-track-code" class="tracker-input" placeholder="أدخل رقم التذكرة (مثل: AD-7091) أو رقم هاتفك" value="AD-7091" />
+          </div>
+          <button id="btn-track-submit" class="btn btn-primary">
+            <span>استعلام الآن</span>
+            <span>←</span>
+          </button>
+        </div>
+
+        <div class="quick-examples-row">
+          <span class="quick-examples-title">نماذج سريعة للتجربة:</span>
+          <span class="pill-code" data-code="AD-7091">AD-7091 (جاهز)</span>
+          <span class="pill-code" data-code="AD-8842">AD-8842 (قيد الصيانة)</span>
+          <span class="pill-code" data-code="AD-4120">AD-4120 (فحص جودة)</span>
+          <span class="pill-code" data-code="AD-9514">AD-9514 (تشخيص مائي)</span>
+          <span class="pill-code" data-code="AD-6238">AD-6238 (تم التسليم)</span>
+        </div>
+      </div>
+
+      <!-- Dynamic Repair Result Card -->
+      <div id="repair-result-container" class="repair-result-card">
+        <div class="result-card-header">
+          <div>
+            <div style="font-size:0.8rem; color:var(--muted); margin-bottom:4px;">تذكرة صيانة رقم:</div>
+            <div class="result-device-title">
+              <span id="ticket-display-id" class="result-ticket-code">AD-7091</span>
+              <span id="ticket-display-model">iPhone 13 Pro Max</span>
+            </div>
+          </div>
+          <div id="ticket-status-badge" class="status-badge ready">
+            <i>●</i> جاهز للاستلام والتسليم
+          </div>
+        </div>
+
+        <!-- 5-Step Interactive Timeline -->
+        <div class="timeline-stages">
+          <div id="timeline-progress-fill" class="timeline-progress-bar" style="width: 100%;"></div>
+
+          <div class="timeline-step completed" data-step="1">
+            <div class="step-node">📦</div>
+            <div class="step-label">تم استلام الهاتف</div>
+          </div>
+
+          <div class="timeline-step completed" data-step="2">
+            <div class="step-node">🔬</div>
+            <div class="step-label">الفحص والتشخيص</div>
+          </div>
+
+          <div class="timeline-step completed" data-step="3">
+            <div class="step-node">⚙️</div>
+            <div class="step-label">قيد الصيانة والقطع</div>
+          </div>
+
+          <div class="timeline-step completed" data-step="4">
+            <div class="step-node">🧪</div>
+            <div class="step-label">اختبار الجودة</div>
+          </div>
+
+          <div class="timeline-step active" data-step="5">
+            <div class="step-node">✅</div>
+            <div class="step-label">جاهز للاستلام</div>
+          </div>
+        </div>
+
+        <!-- Detailed Specifications Grid -->
+        <div class="ticket-details-grid">
+          <div class="detail-block">
+            <span class="detail-label">صاحب الجهاز (العميل)</span>
+            <span id="ticket-customer-name" class="detail-val">محمد عبد الله الشرعبي</span>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-label">رقم الهاتف المسجل</span>
+            <span id="ticket-phone" class="detail-val">771234567</span>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-label">الفني المسؤول المعتمد</span>
+            <span class="detail-val" style="color:var(--lime);">م. أديب الدُميني (خبير هندسي)</span>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-label">تاريخ ووقت الاستلام</span>
+            <span id="ticket-received-at" class="detail-val">2026-11-04 10:30</span>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-label">الموعد المتوقع للتسليم</span>
+            <span id="ticket-estimated-date" class="detail-val">2026-11-05 18:00</span>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-label">طريقة التسليم والاستلام</span>
+            <span id="ticket-intake-method" class="detail-val">تسليم بالمركز (دمنة خدير)</span>
+          </div>
+
+          <div class="detail-block span-3">
+            <span class="detail-label">وصف المشكلة والعطل المشخص</span>
+            <span id="ticket-issue-desc" class="detail-val">كسر في الشاشة الخارجية والشاشة الداخلية بها خطوط خضراء، اللمس متوقف جزئياً في الجزء العلوي.</span>
+          </div>
+
+          <div class="detail-block span-2">
+            <span class="detail-label">قطع الغيار الأصلية المستخدمة</span>
+            <span id="ticket-replaced-parts" class="detail-val" style="color:var(--cyan);">شاشة OLED أصلية وكالة 100% مع برمجة True Tone ونقل فلكس الحساسات</span>
+          </div>
+
+          <div class="detail-block">
+            <span class="detail-label">فترة الضمان المعتمد</span>
+            <span id="ticket-warranty-days" class="detail-val" style="color:var(--lime);">90 يوماً معتمد</span>
+          </div>
+
+          <div class="detail-block span-3">
+            <div class="tech-notes-box">
+              <div class="tech-notes-title">
+                <span>📋 ملاحظات الفحص الهندسي للمهندس:</span>
+              </div>
+              <p id="ticket-tech-notes" class="tech-notes-text">
+                تم استبدال الشاشة بنجاح مع نقل رقاقة الشاشة الأصلية لتفادي رسالة التحذير، تفعيل True Tone بنجاح واختبار اللمس ونسبة الاستجابة بنسبة 100%. تم فحص الشحن والكاميرات والسماعة.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-block span-3" style="display:flex; justify-content:space-between; align-items:center; background:rgba(217,255,106,0.06); padding:14px; border-radius:var(--radius-sm); border:1px solid rgba(217,255,106,0.2);">
+            <div>
+              <span class="detail-label" style="color:var(--cream);">إجمالي تكلفة الصيانة والقطع</span>
+              <div style="font-size:0.8rem; color:var(--muted);">شاملة القطع، الفحص الدقيق، وبرمجة النظام</div>
+            </div>
+            <div style="text-align:left;">
+              <span id="ticket-cost-usd" class="detail-val highlight-lime">$165</span>
+              <span id="ticket-cost-yer" style="font-size:0.95rem; color:var(--cyan); margin-right:8px;">(87,000 ر.ي)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Footer -->
+        <div class="result-card-actions">
+          <button id="btn-print-receipt" class="btn btn-secondary">
+            <span>🖨️ طباعة إيصال الفحص والضمان</span>
+          </button>
+          <button id="btn-track-whatsapp" class="btn btn-whatsapp">
+            <span>💬 استفسر عن هذا الطلب بالواتساب</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 2: DIAGNOSTIC & COST ESTIMATOR (حاسبة الأعطال)
+         =================================================================== -->
+    <section class="app-view" id="view-calculator">
+      <div class="section-title-wrap">
+        <div class="section-kicker"><span>●</span> أداة التشخيص التفاعلي</div>
+        <h2 class="section-main-heading">حاسبة تكلفة ووقت الصيانة الفورية</h2>
+        <p class="section-subdesc">حدد نوع هاتفك والعطل الظاهر للحصول على تقدير فوري للسعر والوقت وفترة الضمان.</p>
+      </div>
+
+      <div class="estimator-layout">
+        <!-- Steps Wizard Card -->
+        <div class="wizard-card">
+          <!-- Step 1: Select Brand -->
+          <div class="wizard-step">
+            <div class="wizard-step-header">
+              <span class="step-num-badge">1</span>
+              <span class="step-title">اختر الشركة المصنعة للهاتف:</span>
+            </div>
+            <div class="brands-grid">
+              <button class="select-btn brand-select-btn selected" data-brand="Apple">
+                <span class="btn-icon">🍎</span>
+                <span>Apple iPhone</span>
+              </button>
+              <button class="select-btn brand-select-btn" data-brand="Samsung">
+                <span class="btn-icon">🪐</span>
+                <span>Samsung</span>
+              </button>
+              <button class="select-btn brand-select-btn" data-brand="Xiaomi">
+                <span class="btn-icon">⚡</span>
+                <span>Xiaomi / Redmi</span>
+              </button>
+              <button class="select-btn brand-select-btn" data-brand="Huawei">
+                <span class="btn-icon">🌸</span>
+                <span>Huawei / Honor</span>
+              </button>
+              <button class="select-btn brand-select-btn" data-brand="Infinix">
+                <span class="btn-icon">📱</span>
+                <span>Infinix / Tecno</span>
+              </button>
+              <button class="select-btn brand-select-btn" data-brand="Pixel">
+                <span class="btn-icon">🌐</span>
+                <span>Google Pixel</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Select Model -->
+          <div class="wizard-step">
+            <div class="wizard-step-header">
+              <span class="step-num-badge">2</span>
+              <span class="step-title">اختر موديل الهاتف أو الفئة:</span>
+            </div>
+            <select id="calc-model-select" class="form-select" style="width:100%;">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <!-- Step 3: Select Issue -->
+          <div class="wizard-step">
+            <div class="wizard-step-header">
+              <span class="step-num-badge">3</span>
+              <span class="step-title">ما هي المشكلة أو العطل الأساسي؟</span>
+            </div>
+            <div class="issues-grid">
+              <button class="select-btn issue-select-btn selected" data-issue="screen">
+                <span class="btn-icon">📱</span>
+                <span class="issue-name">كسر شاشة أو لمس</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="battery">
+                <span class="btn-icon">🔋</span>
+                <span class="issue-name">تبديل بطارية أصلية</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="charging">
+                <span class="btn-icon">⚡</span>
+                <span class="issue-name">منفذ الشحن ودائرة IC</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="water">
+                <span class="btn-icon">💧</span>
+                <span class="issue-name">سقوط في ماء ورطوبة</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="software">
+                <span class="btn-icon">⚙️</span>
+                <span class="issue-name">توقف على الشعار ورومات</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="unlock">
+                <span class="btn-icon">📶</span>
+                <span class="issue-name">فك شفرات وتفعيل 4G</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="security">
+                <span class="btn-icon">🛡️</span>
+                <span class="issue-name">تخطي حماية FRP/iCloud</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="motherboard">
+                <span class="btn-icon">🔬</span>
+                <span class="issue-name">صيانة ماذربورد وشورت</span>
+              </button>
+              <button class="select-btn issue-select-btn" data-issue="camera">
+                <span class="btn-icon">📸</span>
+                <span class="issue-name">كاميرات وزجاج خلفي</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Quality -->
+          <div class="wizard-step">
+            <div class="wizard-step-header">
+              <span class="step-num-badge">4</span>
+              <span class="step-title">فئة القطع المطلوبة:</span>
+            </div>
+            <div class="quality-grid">
+              <button class="select-btn quality-select-btn selected" data-quality="original">
+                <span class="btn-icon">🌟</span>
+                <div>
+                  <div style="font-weight:700;">أصلية وكالة 100% (OEM)</div>
+                  <small style="font-size:0.75rem; color:var(--muted);">أعلى أداء مع أطول فترة ضمان</small>
+                </div>
+              </button>
+              <button class="select-btn quality-select-btn" data-quality="high_copy">
+                <span class="btn-icon">⚖️</span>
+                <div>
+                  <div style="font-weight:700;">درجة أولى (High Copy)</div>
+                  <small style="font-size:0.75rem; color:var(--muted);">تكلفة اقتصادية وجودة ممتازة</small>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Estimate Summary Card -->
+        <div class="estimator-summary-card">
+          <div class="summary-card-header">
+            <div class="summary-title">
+              <span>📊 التقدير المالي والزمني المعتمد</span>
+            </div>
+          </div>
+
+          <div class="price-display-box">
+            <div class="price-title">متوسط التكلفة التقديرية:</div>
+            <div id="est-price-usd" class="price-usd">$65</div>
+            <div id="est-price-yer" class="price-yer">34,450 ر.ي تقريباً</div>
+          </div>
+
+          <div class="estimate-meta-list">
+            <div class="estimate-meta-item">
+              <span class="meta-key">الوقت المتوقع للإنجاز:</span>
+              <span id="est-time-val" class="meta-val">30 - 60 دقيقة</span>
+            </div>
+            <div class="estimate-meta-item">
+              <span class="meta-key">مدة الضمان المعتمد:</span>
+              <span id="est-warranty-val" class="meta-val">90 يوماً</span>
+            </div>
+            <div class="estimate-meta-item">
+              <span class="meta-key">الفحص الأولي المجهري:</span>
+              <span class="meta-val" style="color:var(--lime);">مجاني بالكامل</span>
+            </div>
+            <div class="estimate-meta-item">
+              <span class="meta-key">الفني المشرف:</span>
+              <span class="meta-val">م. أديب الدُميني</span>
+            </div>
+          </div>
+
+          <button id="btn-book-from-estimate" class="btn btn-primary" style="width:100%;">
+            <span>احجز صيانة لهذا الجهاز الآن</span>
+            <span>🚀</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 3: ONLINE BOOKING & INTAKE (حجز صيانة)
+         =================================================================== -->
+    <section class="app-view" id="view-booking">
+      <div class="section-title-wrap">
+        <div class="section-kicker"><span>●</span> الحجز والاستلام الإلكتروني</div>
+        <h2 class="section-main-heading">حجز صيانة وتسليم هاتفك لمركزنا</h2>
+        <p class="section-subdesc">سجل بيانات طلبك لإنشاء تذكرة صيانة رسمية وتجهيز قطع الغيار وفريق الفحص قبل وصولك.</p>
+      </div>
+
+      <div class="booking-form-card">
+        <form id="booking-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">الاسم الكامل <span class="req">*</span></label>
+              <input type="text" id="book-customer-name" class="form-input" placeholder="مثال: فاروق النمر" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">رقم الهاتف / الواتساب <span class="req">*</span></label>
+              <input type="tel" id="book-phone" class="form-input" placeholder="مثال: 771234567" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">الشركة المصنعة <span class="req">*</span></label>
+              <select id="book-brand-select" class="form-select">
+                <option value="Apple">Apple iPhone</option>
+                <option value="Samsung">Samsung Galaxy</option>
+                <option value="Xiaomi">Xiaomi / Redmi / Poco</option>
+                <option value="Huawei">Huawei / Honor</option>
+                <option value="Infinix">Infinix / Tecno</option>
+                <option value="Pixel">Google Pixel</option>
+                <option value="أخرى">شركة أخرى</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">موديل الهاتف المحدد <span class="req">*</span></label>
+              <input type="text" id="book-device-model" class="form-input" placeholder="مثال: iPhone 13 Pro Max أو S23 Ultra" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">نوع العطل الرئيسي <span class="req">*</span></label>
+              <select id="book-issue-category" class="form-select">
+                <option value="screen">شاشة مكسورة أو عطل باللمس</option>
+                <option value="battery">تغيير بطارية أصلية أو تفريغ سريع</option>
+                <option value="charging">منفذ الشحن أو عطل آي سي باور</option>
+                <option value="water">سقوط في ماء أو رطوبة</option>
+                <option value="software">سوفتوير، توقف على الشعار، تعريب</option>
+                <option value="unlock">فك شفرات الشبكة وتفعيل 4G / VoLTE</option>
+                <option value="security">تخطي حماية وحسابات FRP / iCloud</option>
+                <option value="motherboard">صيانة مجهرية متقدمة في الماذر بورد</option>
+                <option value="other">عطل آخر</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">رمز قفل الشاشة (لأغراض الفحص والاختبار)</label>
+              <input type="text" id="book-passcode" class="form-input" placeholder="اختياري - أو اتركه فارغاً وسيتم الفحص بحضورك" />
+            </div>
+
+            <div class="form-group span-full">
+              <label class="form-label">وصف تفصيلي لحالة العطل وتاريخ حدوثه <span class="req">*</span></label>
+              <textarea id="book-issue-desc" class="form-textarea" placeholder="اشرح ما حدث للهاتف بالتفصيل (مثل: سقط على الأرض وانكسرت الشاشة، أو انطفأ فجأة بعد الشحن...)" required></textarea>
+            </div>
+
+            <div class="form-group span-full">
+              <label class="form-label">طريقة التسليم المفضلة:</label>
+              <div class="radio-cards-group">
+                <label class="radio-card">
+                  <input type="radio" name="intake_method" value="center" checked />
+                  <div>
+                    <div style="font-weight:700;">تسليم مباشر بالمركز</div>
+                    <div style="font-size:0.75rem; color:var(--muted);">دمنة خدير — شارع النيابة سابقاً</div>
+                  </div>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="intake_method" value="pickup" />
+                  <div>
+                    <div style="font-weight:700;">طلب مندوب استلام وتسليم</div>
+                    <div style="font-size:0.75rem; color:var(--muted);">خدمة استلام من مكانك والتوصيل بعد الإصلاح</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Privacy Guarantee Banner -->
+          <div class="privacy-banner">
+            <span style="font-size:1.4rem;">🔒</span>
+            <div>
+              <b>ميثاق خصوصية البيانات الصارم:</b>
+              نلتزم بحماية صورك، ملفاتك، ومحادثاتك بأعلى معايير الأمانة الفنية والأخلاقية، ولا يتم فتح أي تطبيق شخصي مطلقاً أثناء الفحص.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; padding:16px;">
+            <span>تأكيد حجز الصيانة وإصدار التذكرة</span>
+            <span>←</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 4: EMERGENCY FIRST-AID & CATALOG (دليل الطوارئ والخدمات)
+         =================================================================== -->
+    <section class="app-view" id="view-catalog">
+      <div class="section-title-wrap">
+        <div class="section-kicker"><span>●</span> قسم الطوارئ والإسعافات</div>
+        <h2 class="section-main-heading">دليل إنقاذ الأجهزة في الحالات الطارئة</h2>
+        <p class="section-subdesc">إجراءات إسعافية عاجلة تنقذ هاتفك من التلف الكامل قبل إحضاره إلى المركز.</p>
+      </div>
+
+      <!-- Emergency Cards Grid -->
+      <div class="emergency-cards-grid">
+        <!-- Case 1: Water Damage -->
+        <div class="emergency-card critical">
+          <div class="emergency-header">
+            <div class="emergency-title">
+              <span>💧 سقوط الهاتف في الماء أو السوائل</span>
+            </div>
+            <span class="emergency-badge danger">حالة حرجة</span>
+          </div>
+          <div class="instructions-list">
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span><b>أطفئ الهاتف فوراً</b> ولا تحاول تشغيله تحت أي ظرف من الظروف.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span>انزع بيت الشريحة والذاكرة وجفف الهاتف بقطعة قماش ناعمة من الخارج.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon dont">✕</span>
+              <span><b>تحذير: لا توصله بالشاحن بتاتاً</b> لأن مرور التيار مع الماء يسبب احتراق المعالج والـ IC فوراً.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon dont">✕</span>
+              <span><b>تحذير: تجنب وضع الهاتف في الأرز أو استخدام مجفف الشعر الساخن</b> (الأرز يدخل الغبار ويكلس الأملاح داخل الهاتف).</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-sm" data-goto="booking" style="align-self:flex-start; margin-top:8px;">
+            احجز فحصاً طارئاً بالموجات الصوتية ↵
+          </button>
+        </div>
+
+        <!-- Case 2: Bootloop / Freezing -->
+        <div class="emergency-card warning">
+          <div class="emergency-header">
+            <div class="emergency-title">
+              <span>🔄 توقف الهاتف على الشعار أو إعادة التشغيل</span>
+            </div>
+            <span class="emergency-badge warn">خلل برمجي</span>
+          </div>
+          <div class="instructions-list">
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span>اضغط مطولاً على زر خفض الصوت + زر الباور لمدة 12 ثانية لإجراء Force Restart.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span>تأكد من شحن الجهاز بنسبة لا تقل عن 50% قبل محاولة التحديث.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon dont">✕</span>
+              <span><b>لا تقم بعمل فورمات أو Wipe Data بنفسك</b> إذا كنت بحاجة للحفاظ على صورك وبياناتك المهمة.</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-sm" data-goto="booking" style="align-self:flex-start; margin-top:8px;">
+            طلب تفليش روم رسمي مع الحفاظ على البيانات ↵
+          </button>
+        </div>
+
+        <!-- Case 3: Battery Swelling -->
+        <div class="emergency-card critical">
+          <div class="emergency-header">
+            <div class="emergency-title">
+              <span>⚠️ انتفاخ البطارية وارتفاع الحرارة</span>
+            </div>
+            <span class="emergency-badge danger">خطر أمان</span>
+          </div>
+          <div class="instructions-list">
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span>افصل الهاتف عن أي شاحن وضعه في مكان آمن غير قابل للاشتعال.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon dont">✕</span>
+              <span><b>إياك والضغط على الشاشة أو محاولة ثقب البطارية المنتفخة</b> لتجنب حدوث اشتعال كيميائي.</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-sm" data-goto="booking" style="align-self:flex-start; margin-top:8px;">
+            طلب استبدال بطارية أصلية فوراً ↵
+          </button>
+        </div>
+
+        <!-- Case 4: Black Screen with Sound -->
+        <div class="emergency-card warning">
+          <div class="emergency-header">
+            <div class="emergency-title">
+              <span>📱 الشاشة سوداء ولكن الهاتف يرن ويهتز</span>
+            </div>
+            <span class="emergency-badge warn">عطل شاشة أو إضاءة</span>
+          </div>
+          <div class="instructions-list">
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span>تحقق من عدم وجود رنين أو مكالمات واردة تؤكد أن الماذر بورد تعمل بشكل سليم.</span>
+            </div>
+            <div class="instr-item">
+              <span class="instr-icon do">✓</span>
+              <span>غالباً العطل محصور في شاشة العرض أو فلكس الإضاءة الخلفية ويمكن حله خلال 30 دقيقة.</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-sm" data-goto="booking" style="align-self:flex-start; margin-top:8px;">
+            فحص الشاشة وتحديد نوع الاستبدال ↵
+          </button>
+        </div>
+      </div>
+
+      <!-- Services Catalog Section -->
+      <div class="services-catalog-wrap">
+        <div class="catalog-filter-bar">
+          <div>
+            <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:4px;">كتالوج الخدمات وقطع الغيار المعتمدة</h3>
+            <p style="font-size:0.85rem; color:var(--muted);">جميع العمليات تنفذ بأحدث أجهزة اللحام المجهري والمبرمجات الأصلية.</p>
+          </div>
+
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <input type="text" id="catalog-search-input" class="catalog-search-input" placeholder="ابحث في الخدمات والقطع..." />
+            <div class="catalog-categories">
+              <button class="cat-filter-btn active" data-cat="all">الكل</button>
+              <button class="cat-filter-btn" data-cat="hardware">هاردوير وشاشات</button>
+              <button class="cat-filter-btn" data-cat="software">سوفتوير ورومات</button>
+              <button class="cat-filter-btn" data-cat="security">حماية وحسابات</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-catalog-grid">
+          <!-- Service 1 -->
+          <div class="service-card-item" data-cat="hardware">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">📱</div>
+                <span class="service-tag">الأكثر طلباً</span>
+              </div>
+              <h4 class="service-title">تبديل الشاشات والزجاج الخارجي (OCA)</h4>
+              <p class="service-desc">
+                شاشات OLED و Super AMOLED أصلية وكالة مع نقل True Tone وحساسات الأمان، أو تجديد الزجاج المكسور فقط بقوالب الضغط الحراري الدقيقة.
+              </p>
+            </div>
+            <div class="service-meta-row">
+              <div class="service-price-block">
+                <span class="service-price-label">تبدأ من:</span>
+                <span class="service-price-val">$25 (13,000 ر.ي)</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-service" data-service-name="تبديل شاشة">طلب الخدمة</button>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card-item" data-cat="hardware">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">🔋</div>
+                <span class="service-tag">ضمان 6 أشهر</span>
+              </div>
+              <h4 class="service-title">استبدال البطاريات الأصلية والمعايرة</h4>
+              <p class="service-desc">
+                بطاريات وكالة بنسبة صحة 100% مع نقل شريحة BMS لأجهزة الآيفون لإظهار نسبة الصحة بدون أي رسالة تحذيرية، مع مقاومة الانتفاخ.
+              </p>
+            </div>
+            <div class="service-meta-row">
+              <div class="service-price-block">
+                <span class="service-price-label">تبدأ من:</span>
+                <span class="service-price-val">$15 (8,000 ر.ي)</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-service" data-service-name="تغيير بطارية">طلب الخدمة</button>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card-item" data-cat="hardware">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">🔬</div>
+                <span class="service-tag">مجهر إلكتروني</span>
+              </div>
+              <h4 class="service-title">صيانة الماذر بورد واللحام المجهري</h4>
+              <p class="service-desc">
+                إصلاح آي سي الباور (Power IC)، آي سي الشحن (Hydra / Tristar)، معالجة أعطال الشورت والقصر الكهربائي بالمجهر الحراري والـ Thermal Cam.
+              </p>
+            </div>
+            <div class="service-meta-row">
+              <div class="service-price-block">
+                <span class="service-price-label">تبدأ من:</span>
+                <span class="service-price-val">$30 (16,000 ر.ي)</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-service" data-service-name="صيانة ماذربورد">طلب الخدمة</button>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card-item" data-cat="software">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">⚙️</div>
+                <span class="service-tag">سرعة فورية</span>
+              </div>
+              <h4 class="service-title">تفليش الرومات وإصلاح الموت المفاجئ</h4>
+              <p class="service-desc">
+                رومات رسمية وكالة لجميع الأجهزة، إصلاح أخطاء النظام، استعادة الهاتف بعد فشل التحديث وحل مشكلة البوتلوب بدون فقدان البيانات.
+              </p>
+            </div>
+            <div class="service-meta-row">
+              <div class="service-price-block">
+                <span class="service-price-label">تبدأ من:</span>
+                <span class="service-price-val">$10 (5,000 ر.ي)</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-service" data-service-name="سوفتوير ورومات">طلب الخدمة</button>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card-item" data-cat="software">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">📶</div>
+                <span class="service-tag">فك رسمي دائم</span>
+              </div>
+              <h4 class="service-title">فك شفرات الشبكات وتفعيل 4G و VoLTE</h4>
+              <p class="service-desc">
+                فك قفل الشبكات الأمريكية والعالمية وتفعيل شرائح يمن موبايل وسبأفون ويو على أجهزة الآيفون وسامسونج وبيكسل بأحدث السيرفرات.
+              </p>
+            </div>
+            <div class="service-meta-row">
+              <div class="service-price-block">
+                <span class="service-price-label">تبدأ من:</span>
+                <span class="service-price-val">$10 (5,000 ر.ي)</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-service" data-service-name="فك شفرة وتفعيل 4G">طلب الخدمة</button>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card-item" data-cat="security">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-box">🛡️</div>
+                <span class="service-tag">حماية معتمدة</span>
+              </div>
+              <h4 class="service-title">تخطي حسابات الحماية FRP و iCloud</h4>
+              <p class="service-desc">
+                حلول معتمدة لأقفال جوجل وحسابات شاومي Mi Cloud وحسابات أبل مع الالتزام الصارم بإثبات ملكية الجهاز للعميل والخصوصية.
+              </p>
+            </div>
+            <div class="service-meta-row">
+              <div class="service-price-block">
+                <span class="service-price-label">تبدأ من:</span>
+                <span class="service-price-val">$12 (6,500 ر.ي)</span>
+              </div>
+              <button class="btn btn-primary btn-sm btn-order-service" data-service-name="تخطي حماية وحسابات">طلب الخدمة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 5: TECHNICIAN & ADMIN HUB (لوحة تحكم الفني والإدارة)
+         =================================================================== -->
+    <section class="app-view" id="view-admin">
+      <div class="section-title-wrap">
+        <div class="section-kicker"><span>●</span> بوابة إدارة المركز</div>
+        <h2 class="section-main-heading">لوحة تحكم الفني ومتابعة تذاكر الصيانة</h2>
+        <p class="section-subdesc">إدارة شاملة لجميع الأجهزة المستلمة، تحديث الحالات، إصدار الفواتير وطباعة كروت الاستلام.</p>
+      </div>
+
+      <!-- KPI Metrics Strip -->
+      <div class="admin-kpi-grid">
+        <div class="kpi-card c-lime">
+          <div class="kpi-label">إجمالي الأجهزة النشطة</div>
+          <div class="kpi-num kpi-total-val">6</div>
+        </div>
+        <div class="kpi-card c-warning">
+          <div class="kpi-label">قيد الصيانة والفحص</div>
+          <div class="kpi-num kpi-progress-val">3</div>
+        </div>
+        <div class="kpi-card c-cyan">
+          <div class="kpi-label">جاهزة للاستلام والتسليم</div>
+          <div class="kpi-num kpi-ready-val">1</div>
+        </div>
+        <div class="kpi-card c-purple">
+          <div class="kpi-label">تم تسليمها للعملاء</div>
+          <div class="kpi-num kpi-delivered-val">1</div>
+        </div>
+        <div class="kpi-card c-info">
+          <div class="kpi-label">الإيرادات الإجمالية</div>
+          <div class="kpi-num kpi-revenue-val">$340</div>
+        </div>
+      </div>
+
+      <!-- Admin Actions Toolbar -->
+      <div class="admin-actions-bar">
+        <div class="admin-search-box">
+          <input type="text" id="admin-search-input" class="form-input" placeholder="بحث باسم العميل، الموديل، أو رقم التذكرة..." style="width:260px;" />
+          <button id="btn-admin-add-ticket" class="btn btn-primary btn-sm">
+            <span>➕ تذكرة استلام محلية جديدة</span>
+          </button>
+        </div>
+
+        <div class="admin-filter-pills">
+          <button class="filter-pill active" data-filter="all">الكل</button>
+          <button class="filter-pill" data-filter="diagnosing">قيد الفحص</button>
+          <button class="filter-pill" data-filter="repairing">قيد الصيانة</button>
+          <button class="filter-pill" data-filter="ready">جاهز للاستلام</button>
+          <button class="filter-pill" data-filter="delivered">تم التسليم</button>
+        </div>
+
+        <button id="btn-admin-export" class="btn btn-ghost btn-sm" title="تصدير نسخة احتياطية من التذاكر">
+          <span>💾 تصدير JSON</span>
+        </button>
+      </div>
+
+      <!-- Management Table -->
+      <div class="table-responsive">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>رقم التذكرة</th>
+              <th>العميل والهاتف</th>
+              <th>نوع الجهاز والعطل</th>
+              <th>تحديث الحالة</th>
+              <th>التكلفة</th>
+              <th>تاريخ الاستلام</th>
+              <th>إجراءات</th>
+            </tr>
+          </thead>
+          <tbody id="admin-tickets-tbody">
+            <!-- Populated dynamically by app.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       MODAL 1: Booking Success Modal
+       =================================================================== -->
+  <div id="booking-success-modal" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>🎉 تم تسجيل طلب الصيانة بنجاح!</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('booking-success-modal')">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        <p style="color:var(--muted-light); margin-bottom:16px;">
+          تم إنشاء تذكرة صيانة رسمية في النظام وسيتم استقبال جهازك وتجهيز الفحص الفني:
+        </p>
+
+        <div style="background:rgba(217,255,106,0.1); border:1px solid var(--lime); border-radius:var(--radius-md); padding:20px; margin-bottom:20px;">
+          <div style="font-size:0.8rem; color:var(--muted);">رقم التذكرة الخاص بك:</div>
+          <div id="modal-conf-ticket-id" style="font-size:2.2rem; font-weight:900; color:var(--lime); font-family:var(--font-mono);">AD-7429</div>
+          <div id="modal-conf-device" style="font-size:1rem; font-weight:700; color:var(--cream); margin-top:4px;">iPhone 13 Pro Max</div>
+          <div id="modal-conf-name" style="font-size:0.85rem; color:var(--cyan);">محمد الشرعبي</div>
+        </div>
+
+        <p style="font-size:0.85rem; color:var(--muted); line-height:1.7;">
+          يمكنك تتبع تقدم الصيانة في أي وقت عبر إدخال هذا الرقم في خانة التتبع بالتطبيق.
+        </p>
+      </div>
+      <div class="modal-footer" style="justify-content:center;">
+        <button id="btn-modal-wa-confirm" class="btn btn-whatsapp">
+          <span>💬 تأكيد الطلب فوراً عبر واتساب المركز</span>
+        </button>
+        <button id="btn-modal-track-now" class="btn btn-primary">
+          <span>🔍 تتبع التذكرة الآن</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 2: Printable Receipt & Warranty Sheet Modal
+       =================================================================== -->
+  <div id="modal-print-receipt" class="modal-backdrop">
+    <div class="modal-content" style="max-width:760px;">
+      <div class="modal-header no-print">
+        <div class="modal-title">
+          <span>🖨️ إيصال استلام وفاتورة وضمان الصيانة المعتمد</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-print-receipt')">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Printable White Receipt Document -->
+        <div class="printable-receipt">
+          <div class="receipt-header-row">
+            <div>
+              <div class="receipt-brand-title">أديب الدُميني — Phone Care</div>
+              <div class="receipt-brand-sub">مركز هندسي متخصص لصيانة وبرمجة الهواتف الذكية</div>
+              <div class="receipt-brand-sub">اليمن — تعز — دمنة خدير (شارع النيابة سابقاً) · هاتف: 770000000</div>
+            </div>
+            <div class="receipt-barcode-box">
+              <div class="simulated-barcode" id="receipt-barcode-txt">*AD-7091*</div>
+              <div style="font-size:0.75rem; font-weight:800; margin-top:4px;">تذكرة: <span id="receipt-id">AD-7091</span></div>
+            </div>
+          </div>
+
+          <table class="receipt-info-table">
+            <tr>
+              <td class="label">اسم العميل:</td>
+              <td id="receipt-customer">محمد عبد الله الشرعبي</td>
+              <td class="label">تاريخ الاستلام:</td>
+              <td id="receipt-date">2026-11-04</td>
+            </tr>
+            <tr>
+              <td class="label">رقم الهاتف:</td>
+              <td id="receipt-phone">771234567</td>
+              <td class="label">الفني المسؤول:</td>
+              <td id="receipt-tech">م. أديب الدُميني</td>
+            </tr>
+            <tr>
+              <td class="label">نوع وموديل الجهاز:</td>
+              <td id="receipt-device" style="font-weight:700;">iPhone 13 Pro Max</td>
+              <td class="label">فترة الضمان:</td>
+              <td id="receipt-warranty" style="font-weight:700; color:#0b6623;">90 يوماً من تاريخ الاستلام</td>
+            </tr>
+            <tr>
+              <td class="label">العطل المشخص:</td>
+              <td colspan="3" id="receipt-issue">كسر الشاشة واللمس، نقل رقاقة True Tone</td>
+            </tr>
+            <tr>
+              <td class="label">القطع المستبدلة:</td>
+              <td colspan="3" id="receipt-parts">شاشة OLED أصلية وكالة 100%</td>
+            </tr>
+            <tr style="background:#f4f6f8;">
+              <td class="label" style="font-size:1rem; color:#000;">إجمالي التكلفة:</td>
+              <td colspan="3" id="receipt-cost" style="font-size:1.15rem; font-weight:900; color:#000;">$165 (87,000 ريال يمني)</td>
+            </tr>
+          </table>
+
+          <div class="receipt-terms">
+            <b>شروط وأحكام الضمان والاستلام:</b>
+            <ol style="margin-right:20px; margin-top:4px;">
+              <li>الضمان يسري على القطع المستبدلة فقط ولا يشمل الكسر الناتج عن السقوط أو التعرض للماء بعد التسليم.</li>
+              <li>يرجى إبراز هذا الإيصال أو رقم التذكرة عند استلام الجهاز من المركز.</li>
+              <li>المركز غير مسؤول عن الأجهزة المتروكة لأكثر من 60 يوماً بعد إشعار الجاهزية.</li>
+            </ol>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; margin-top:24px; padding-top:14px; border-top:1px dashed #aaa; font-size:0.82rem;">
+            <div>توقيع واستلام العميل: ___________________</div>
+            <div>ختم وتوقيع المركز: <b>م. أديب الدُميني ✦</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer no-print">
+        <button class="btn btn-secondary" onclick="closeModal('modal-print-receipt')">إغلاق</button>
+        <button id="btn-trigger-print" class="btn btn-primary">
+          <span>🖨️ طباعة الإيصال / حفظ كـ PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 3: Add Walk-In Ticket Modal (for Center Technicians)
+       =================================================================== -->
+  <div id="modal-add-ticket" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>➕ فتح تذكرة استلام وصيانة جديدة بالمركز</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-add-ticket')">&times;</button>
+      </div>
+      <form id="form-modal-new-ticket">
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">اسم العميل <span class="req">*</span></label>
+              <input type="text" id="new-t-name" class="form-input" placeholder="اسم الزبون" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">رقم الهاتف</label>
+              <input type="tel" id="new-t-phone" class="form-input" placeholder="رقم الهاتف" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">نوع وموديل الجهاز <span class="req">*</span></label>
+              <input type="text" id="new-t-device" class="form-input" placeholder="مثال: Galaxy S24 Ultra" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">التكلفة المتفق عليها ($)</label>
+              <input type="number" id="new-t-cost" class="form-input" placeholder="مثال: 50" />
+            </div>
+            <div class="form-group span-full">
+              <label class="form-label">حالة التذكرة المبدئية</label>
+              <select id="new-t-status" class="form-select">
+                <option value="diagnosing">🔬 قيد الفحص والتشخيص الفني</option>
+                <option value="repairing">⚙️ قيد الصيانة واستبدال القطع</option>
+                <option value="ready">✅ جاهز للاستلام والتسليم</option>
+              </select>
+            </div>
+            <div class="form-group span-full">
+              <label class="form-label">وصف العطل والفحص المبدئي <span class="req">*</span></label>
+              <textarea id="new-t-issue" class="form-textarea" placeholder="عطل الشاشة، الشاحن، أو مشكلة السوفتوير..." required></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-add-ticket')">إلغاء</button>
+          <button type="submit" class="btn btn-primary">حفظ وطباعة إيصال الاستلام ↵</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 4: Edit Ticket Modal
+       =================================================================== -->
+  <div id="modal-edit-ticket" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span id="edit-modal-title">تعديل تذكرة الصيانة</span>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('modal-edit-ticket')">&times;</button>
+      </div>
+      <form id="form-modal-edit-ticket">
+        <input type="hidden" id="edit-t-id" />
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">تحديث الحالة</label>
+              <select id="edit-t-status" class="form-select">
+                <option value="diagnosing">🔬 قيد الفحص والتشخيص الفني</option>
+                <option value="repairing">⚙️ قيد الصيانة واستبدال القطع</option>
+                <option value="quality_check">🧪 فحص الجودة والضمان بعد الإصلاح</option>
+                <option value="ready">✅ جاهز للاستلام والتسليم</option>
+                <option value="delivered">📦 تم التسليم للعميل بنجاح</option>
+                <option value="waiting_approval">⏳ بانتظار موافقة العميل على التكلفة</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">التكلفة النهائية ($)</label>
+              <input type="number" id="edit-t-cost" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">فترة الضمان (بالأيام)</label>
+              <input type="number" id="edit-t-warranty" class="form-input" />
+            </div>
+            <div class="form-group span-full">
+              <label class="form-label">القطع المستبدلة</label>
+              <input type="text" id="edit-t-parts" class="form-input" />
+            </div>
+            <div class="form-group span-full">
+              <label class="form-label">ملاحظات الفحص والتقرير الفني</label>
+              <textarea id="edit-t-notes" class="form-textarea"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-edit-ticket')">إلغاء</button>
+          <button type="submit" class="btn btn-primary">حفظ التعديلات ↵</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- App Footer -->
+  <footer style="margin-top:80px; padding:40px 0; border-top:1px solid var(--ink-border); text-align:center; color:var(--muted); font-size:0.85rem;">
+    <div class="container">
+      <div style="font-size:1.1rem; font-weight:800; color:var(--cream); margin-bottom:8px;">
+        أديب الدُميني — Phone Care
+      </div>
+      <p style="margin-bottom:12px;">
+        المركز الهندسي الأول لصيانة وبرمجة الهواتف الذكية · دمنة خدير — شارع النيابة سابقاً · تعز — اليمن
+      </p>
+      <div style="font-size:0.75rem; color:var(--muted-light);">
+        تطبيق ويب تفاعلي تقدمي (PWA) · Developed by Farouk Alnamer · جميع الحقوق محفوظة &copy; 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="/app.js"></script>
+</body>
+</html>
